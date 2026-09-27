@@ -5,6 +5,6 @@ import sys
 try:
     x = 1/0
 except Exception as e:
-    raise USvisaException(e, sys.exc_info())
+    raise USvisaException(str(e), sys) from e
 
 '''logging.info("welcome to our Custom log")'''
